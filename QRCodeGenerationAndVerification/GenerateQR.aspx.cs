@@ -8,11 +8,11 @@ namespace QRCodeGenerationAndVerification
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string domain = "http://localhost:27789/";
+            string domain = "http://localhost:2779/";
             string qrCodeImgFileName = new Random().Next().ToString() + ".jpg";
 
             // QR Code information == QR Code validation url
-            string qrCodeInformation = domain + "ValidateQRCode.aspx?identity=" + qrCodeImgFileName;
+            string qrCodeInformation = domain + "ValidateQR.aspx?identity=" + qrCodeImgFileName;
 
             // Generate QR Code
             QRCodeEncoder qe = new QRCodeEncoder();
@@ -30,9 +30,10 @@ namespace QRCodeGenerationAndVerification
             }
 
             // View generated QR Code
-            // Download free QR Scanner mobile application and scan using mobile, you will see http://localhost:27789/ValidateQRCode.aspx?identity=some_random as result
-            // Or you can install this free tool on PC to scan http://www.quickmark.com.tw/en/basic/downloadPC.asp
+            // Download free QR Scanner mobile application and scan using mobile, you will see http://localhost:2779/ValidateQR.aspx?identity=some_random as result
             Image1.ImageUrl = "~/QRCodes/" + qrCodeImgFileName;
+
+            Label1.Text = qrCodeInformation;
 
         }
     }

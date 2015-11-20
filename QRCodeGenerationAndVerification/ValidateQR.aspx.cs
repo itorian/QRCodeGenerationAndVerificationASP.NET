@@ -14,7 +14,7 @@ namespace QRCodeGenerationAndVerification
         {
             if (Request.QueryString["identity"] != null)
             {
-                string qrCodeFileName = "~/QRCodes/" + Request.QueryString["identity"];
+                string qrCodeFileName = Server.MapPath("~/QRCodes/") + Request.QueryString["identity"];
 
                 // Check QR Code file available
                 if(File.Exists(qrCodeFileName))

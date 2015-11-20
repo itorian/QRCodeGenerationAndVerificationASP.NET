@@ -132,7 +132,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="QRCodes\" />
   </ItemGroup>
   <PropertyGroup>
@@ -150,7 +149,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>27789</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:27789/</IISUrl>
+          <IISUrl>http://localhost:2779/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
